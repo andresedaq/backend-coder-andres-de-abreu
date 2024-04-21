@@ -1,15 +1,6 @@
 [
     {
-        "id": 2,
-        "title": "Samsung Galaxy A52",
-        "description": "A mid-range smartphone with a high-quality camera.",
-        "price": 399,
-        "thumbnail": "a52-thumbnail.jpg",
-        "code": "A52",
-        "stock": 15
-    },
-    {
-        "id": 3,
+        "id": 1,
         "title": "Samsung Galaxy Note 20",
         "description": "A premium smartphone with a stylus and powerful performance.",
         "price": 899,
@@ -18,7 +9,7 @@
         "stock": 8
     },
     {
-        "id": 4,
+        "id": 2,
         "title": "Samsung Galaxy Fold",
         "description": "A foldable smartphone with innovative design and technology.",
         "price": 1999,
@@ -27,7 +18,7 @@
         "stock": 5
     },
     {
-        "id": 5,
+        "id": 3,
         "title": "Samsung Galaxy S20 FE",
         "description": "A budget-friendly smartphone with flagship-level features.",
         "price": 599,
