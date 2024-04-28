@@ -1,9 +1,10 @@
 import fs from "fs";
 
-let pathFile = "./data/products.json";
 let products = [];
+let pathFile = "./src/data/products.json";
 
-const create = async (title, description, price, thumbnail, code, stock) => {
+const create = async (product) => {
+    const { title, description, price, thumbnail, code, stock } = product;
     const newProduct = {
         id: products.length + 1,
         title,
@@ -12,12 +13,15 @@ const create = async (title, description, price, thumbnail, code, stock) => {
         thumbnail,
         code,
         stock,
+        status: true,
     };
 
     if (Object.values(newProduct).includes(undefined)) {
         console.log("All information is required");
         return;
     }
+
+    await read();
 
     const productExists = products.find((product) => product.code === code);
     if (productExists) {
@@ -95,15 +99,4 @@ const destroy = async (id) => {
     }
 };
 
-create("Samsung Galaxy Note 20", "A premium smartphone with a stylus and powerful performance.", 899, "note20-thumbnail.jpg", "Note20", 8);
-create("Samsung Galaxy Fold", "A foldable smartphone with innovative design and technology.", 1999, "fold-thumbnail.jpg", "Fold", 5);
-create("Samsung Galaxy S20 FE", "A budget-friendly smartphone with flagship-level features.", 599, "s20fe-thumbnail.jpg", "S20FE", 12);
-create("Samsung Galaxy S27 FE", "A budget-friendly smartphone with flagship-level features.", 599, "s20fe-thumbnail.jpg", "S20FE", 12);
-
-// // read();
-// readId(2);
-
-// update(1 , {"id": 1,
-// "title": "Samsung Galaxy S23"})
-
-// destroy(1);
+export default { create, read, readId, update, destroy };
