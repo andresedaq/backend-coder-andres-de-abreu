@@ -1,6 +1,6 @@
 import { Router } from "express";
-import productRouters from "./products.routes.js"
-import cartsRouters from "./carts.routes.js"
+import productRouters from "../routes/products.routes.js"
+import cartsRouters from "../routes/carts.routes.js"
 
 // Configuracion de Endpoints
 const router = Router();
