@@ -1,5 +1,6 @@
 import { Router } from "express";
 import productDao from "../dao/mongoDao/product.dao.js";
+import { isLogin } from "../middlewares/islogin.middleware.js";
 
 const router = Router();
 
